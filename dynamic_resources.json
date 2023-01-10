@@ -1,0 +1,45 @@
+{
+    "tfcoremock_dynamic_resource": {
+        "attributes": {
+            "string": {
+                "type": "string",
+                "required": true
+            }
+        },
+        "blocks": {
+            "rke_config": {
+                "attributes": {},
+                "mode": "list",
+                "blocks": {
+                    "services": {
+                        "attributes": {},
+                        "mode": "list",
+                        "blocks": {
+                            "etcd": {
+                                "attributes": {},
+                                "mode": "list",
+                                "blocks": {
+                                    "backup_config": {
+                                        "attributes": {},
+                                        "mode": "list",
+                                        "blocks": {
+                                            "s3_backup_config": {
+                                                "attributes": {
+                                                    "string": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    }
+                                                },
+                                                "mode": "list"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
